@@ -34,7 +34,7 @@ public class TouristController {
         return "find_a_bar";
     }
 
-    @GetMapping(path = "/{name}")
+    /*@GetMapping(path = "/{name}")
     public ResponseEntity<TouristAttraction> getAttraction(@PathVariable String name) {
         TouristAttraction t = touristService.getTouristAttraction(name);
         return new ResponseEntity<TouristAttraction>(t, HttpStatus.OK);
