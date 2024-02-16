@@ -34,13 +34,19 @@ public TouristAttraction getTouristAttraction (String name){
         attractions.add(touristAttraction);
     }
 
-    public TouristAttraction updateAttraction(String name, String newDescription) {
+    public void updateAttraction(TouristAttraction touristAttraction) {
+        for (TouristAttraction t : attractions) {
+            if (touristAttraction.getName().equalsIgnoreCase(t.getName())) {
+                t = touristAttraction;
+            }
+        }
+    }
+
+    public TouristAttraction findAttractionByName(String name) {
         for (TouristAttraction t : attractions) {
             if (name.equalsIgnoreCase(t.getName())) {
-                t.setDescription(newDescription);
                 return t;
             }
-
         }
         return null;
     }

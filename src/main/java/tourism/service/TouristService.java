@@ -20,13 +20,16 @@ public class TouristService {
         return repository.getTouristAttraction(name);
     }
 
-    public TouristAttraction addAttraction(TouristAttraction touristAttraction){
+    public void addAttraction(TouristAttraction touristAttraction){
         repository.addAttraction(touristAttraction);
-        return touristAttraction;
     }
 
-    public TouristAttraction updateAttraction(String name, String newDescription){
-        return repository.updateAttraction(name, newDescription);
+    public TouristAttraction findAttractionByName(String name){
+        return repository.findAttractionByName(name);
+    }
+
+    public void updateAttraction(TouristAttraction touristAttraction){
+        repository.updateAttraction(touristAttraction);
     }
 
     public List<TouristAttraction> deleteAttraction(String name){

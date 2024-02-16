@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="/attractions/update" th:object="${attraction}" method="post">
+    <p><label>Name:</label>
+        <input type="text" name="name" th:value="${attraction.name}"/>
+    </p><p><label>Description</label>
+    <input type="text" name="description" th:value="${attraction.description}"/>
+</p>
+    <input type="submit" value="Opdater" /></form>
+</body>
+</html>
