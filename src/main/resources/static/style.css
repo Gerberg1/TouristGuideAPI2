@@ -1,0 +1,281 @@
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.site-header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+.banner {
+    background: url('https://files.guidedanmark.org/files/382/2464_Salon_39.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+}
+
+.service {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(33% - 20px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service a {
+    color: #333;
+    text-decoration: none;
+}
+
+
+.services a, .services a:visited {
+    color: #333;
+    text-decoration: none;
+}
+
+.services a:hover, .services a:focus {
+    color: #333;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+
+.services .service a {
+    display: block;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.services .service {
+    margin: 10px;
+    padding: 0;
+    width: calc(33% - 20px);
+    text-align: center;
+    border: none;
+    box-shadow: none;
+}
+
+
+.services .service img, .services .service h3, .services .service p {
+    pointer-events: none;
+}
+
+.service img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Destinations Section */
+.destinations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.destination {
+    margin: 10px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a:not(:last-child) {
+    margin-right: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services, .destinations {
+        flex-direction: column;
+    }
+
+    .service, .destination {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    main img {
+        width: 100%;
+        max-width: 1024px;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+    }
+
+    body {
+        font-family: 'Open Sans', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    .site-header {
+        background-color: #333;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .site-header .logo {
+        font-weight: bold;
+        color: #fff;
+    }
+
+    nav ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0 15px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    main {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    form {
+        display: grid;
+        grid-gap: 20px;
+        padding: 20px;
+    }
+
+    label {
+        display: block;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        height: 150px;
+        resize: vertical;
+    }
+
+    button[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+        margin-top: 40px;
+    }
+
+
+
+}

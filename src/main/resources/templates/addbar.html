@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Tilføj attraktion</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form action="/attractions/add" method="POST">
+    <p>Tilføj en attraktion til listen</p>
+
+    <div>
+        <label for="newAttractionName">Navn</label>
+        <input name="newName" id="newAttractionName" value="">
+    </div>
+    <div>
+        <label for="newAttractionDescription">Beskrivelse</label>
+        <input name="newDescription" id="newAttractionDescription" value="">
+    </div>
+    <div>
+        <button>Opret attraktion</button>
+    </div>
+</form>
+
+<form action="/attractions/update" method="POST">
+    <p>Opdater en attraktion</p>
+
+    <div>
+        <label for="attractionName">Navn</label>
+        <input name="name" id="attractionName" value="">
+    </div>
+    <div>
+        <label for="updatedAttractionDescription">Beskrivelse</label>
+        <input name="updatedDescription" id="updatedAttractionDescription" value="">
+    </div>
+    <div>
+        <button>Opdater attraktion</button>
+    </div>
+</form>
+
+</body>
+</html>
