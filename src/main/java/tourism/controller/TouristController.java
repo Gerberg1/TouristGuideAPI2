@@ -56,16 +56,6 @@ public class TouristController {
 
 
 
-    /*@PostMapping(path = "/opret")
-    public String postAttraction(@RequestBody @RequestParam Map<String, String> numbers) {
-        String name = numbers.get("name");
-        String description = numbers.get("description");
-        TouristAttraction touristAttraction = touristService.addAttraction(new TouristAttraction(name, description));
-        return "Attraktionen er oprettet!";
-    }*/
-
-
-
 
 }
 
