@@ -20,12 +20,6 @@ public class TouristController {
         this.touristService = touristService;
     }
 
-    /*@GetMapping(path = "")
-    public ResponseEntity<List<TouristAttraction>> getTouristAttractions() {
-        List attractions = touristService.getTouristAttrations();
-        return new ResponseEntity<List<TouristAttraction>>(attractions, HttpStatus.OK);
-    }*/
-
     @GetMapping(path = "")
     public String getTouristAttractions(Model model) {
         List attractions = touristService.getTouristAttrations();
@@ -44,7 +38,7 @@ public class TouristController {
     public ResponseEntity<TouristAttraction> getAttraction(@PathVariable String name) {
         TouristAttraction t = touristService.getTouristAttraction(name);
         return new ResponseEntity<TouristAttraction>(t, HttpStatus.OK);
-    }
+    }*/
 
     /*@GetMapping(path = "/delete/{name}")
     public ResponseEntity<List<TouristAttraction>> deleteAttraction(@PathVariable String name) {
@@ -53,13 +47,6 @@ public class TouristController {
 
     }*/
 
-   /* @PostMapping(path="/add")
-   public ResponseEntity<TouristAttraction> addAttraction (@RequestParam @RequestBody Map<String, String> numbers) {
-        String name = numbers.get("newName");
-        String description = numbers.get("newDescription");
-       TouristAttraction touristAttraction = touristService.addAttraction(new TouristAttraction(name, description));
-       return new ResponseEntity<TouristAttraction>(touristAttraction, HttpStatus.OK);
-   }*/
     @GetMapping(path="/add")
    public String addAttraction (Model model) {
         model.addAttribute("attraction", new TouristAttraction());
@@ -81,9 +68,9 @@ public class TouristController {
         return "updatebar";
     }
     @PostMapping(path="/update")
-    public String updateAttraction(@ModelAttribute TouristAttraction touristAttraction){
+    public String updateAttraction(TouristAttraction touristAttraction){
     touristService.updateAttraction(touristAttraction);
-    return "updatebar";
+    return "redirect:/attractions";
     }
 
 

@@ -1,17 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Update Product</title>
 </head>
 <body>
+<form action="/attractions/update" method="post" th:object="${attraction}">
+    <!-- hidden form field til at gemme id på objekt der redigeres -->
+    <p>
+        <label>Name:</label>
+        <input name="name" type="text" th:value="${attraction.name}"/>
+    </p>
 
-<form action="/attractions/update" th:object="${attraction}" method="post">
-    <p><label>Name:</label>
-        <input type="text" name="name" th:value="${attraction.name}"/>
-    </p><p><label>Description</label>
-    <input type="text" name="description" th:value="${attraction.description}"/>
-</p>
-    <input type="submit" value="Opdater" /></form>
+
+    <p>
+        <label>Description:</label>
+        <input name="description" type="description" th:value="${attraction.description}"/>
+    </p>
+
+
+    <p>
+        <button type="submit">Update attractions</button>
+
+
+        <a th:href="@{'/attractions'}">
+            <button type="button">Cancel</button>
+        </a>
+    </p>
+</form>
+
+
 </body>
 </html>

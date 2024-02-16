@@ -8,6 +8,8 @@ import java.util.List;
 
 @Repository
 public class TouristRepository {
+
+    private String attractionToUpdate = "";
     private ArrayList<TouristAttraction> attractions;
 
     public TouristRepository(){
@@ -36,16 +38,20 @@ public TouristAttraction getTouristAttraction (String name){
 
     public void updateAttraction(TouristAttraction touristAttraction) {
         for (TouristAttraction t : attractions) {
-            if (touristAttraction.getName().equalsIgnoreCase(t.getName())) {
-                t = touristAttraction;
+            if (t.getName().equalsIgnoreCase(attractionToUpdate)) {
+                t.setDescription(touristAttraction.getDescription());
+                t.setName(touristAttraction.getName());
             }
         }
     }
 
+
     public TouristAttraction findAttractionByName(String name) {
         for (TouristAttraction t : attractions) {
             if (name.equalsIgnoreCase(t.getName())) {
+                attractionToUpdate = t.getName();
                 return t;
+
             }
         }
         return null;
