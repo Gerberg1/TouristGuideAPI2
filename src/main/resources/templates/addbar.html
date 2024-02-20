@@ -11,6 +11,21 @@
 </p><p><label>Description</label>
     <input type="text" name="description" th:field="*{description}"/>
 </p>
+    <label for="citypart">Select a part of the city:</label>
+
+    <select name="citypart" id="citypart" th:field="*{cityPart}">
+        <option value="Amager">Amager</option>
+        <option value="Nørrebro">Nørrebro</option>
+        <option value="Vesterbro">Vesterbro</option>
+        <option value="Østerbro">Østerbro</option>
+    </select>
+
+    <input type="checkbox" id="pub" name="pub" value="pub">
+    <label for="pub"> pub</label><br>
+    <input type="checkbox" id="sportsbar" name="sportsbar" value="sportsbar">
+    <label for="sportsbar"> sportsbar</label><br>
+    <input type="checkbox" id="studentbar" name="studentbar" value="studentbar">
+    <label for="studentbar"> studentbar</label><br>
     <input type="submit" value="Tilføj" /></form>
 </body>
 </html>

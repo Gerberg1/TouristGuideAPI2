@@ -14,9 +14,9 @@ public class TouristRepository {
 
     public TouristRepository(){
         this.attractions = new ArrayList<>();
-        attractions.add(new TouristAttraction("Guldbar", "Fredagscafé"));
-        attractions.add(new TouristAttraction("Hatten", "Godbar"));
-        attractions.add(new TouristAttraction("BipBipBar", "Dyr bar"));
+        attractions.add(new TouristAttraction("Guldbar", "Fredagscafé", "Nørrebro", List.of("Studentbar")));
+        attractions.add(new TouristAttraction("Hatten", "Godbar", "Amager", List.of("Studentbar", "Pub")));
+        attractions.add(new TouristAttraction("BipBipBar", "Dyr bar", "Nørrebro", List.of("Sportsbar")));
     }
 
 public List<TouristAttraction> getTouristAttractions(){
@@ -57,13 +57,12 @@ public TouristAttraction getTouristAttraction (String name){
         return null;
     }
 
-    public List<TouristAttraction> deleteAttraction(String name) {
+    public void deleteAttraction(String name) {
         for (TouristAttraction t : attractions) {
             if (name.equalsIgnoreCase(t.getName())) {
                 attractions.remove(t);
             }
         }
-        return attractions;
     }
 
 

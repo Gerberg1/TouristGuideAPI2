@@ -14,8 +14,16 @@
     <tbody>
     <tr th:each="touristAttraction : ${attractions}">
         <td>
-            <a th:text="${touristAttraction.name}">Barens navn</a>
+            <a th:text="${touristAttraction.name}">Attraction name</a>
             <a th:text="${touristAttraction.description}">Attraction description</a>
+            <a th:text="${touristAttraction.cityPart}">Attraction city part</a>
+            <p>
+
+                <a th:href="@{ ${touristAttraction.name} + '/tags'}">
+                    <button type="button">Tags</button>
+                </a>
+            </p>
+
         </td>
     </tr>
     </tbody>

@@ -37,12 +37,19 @@ public class TouristController {
         return new ResponseEntity<TouristAttraction>(t, HttpStatus.OK);
     }*/
 
-    /*@GetMapping(path = "/delete/{name}")
-    public ResponseEntity<List<TouristAttraction>> deleteAttraction(@PathVariable String name) {
-       List attractions = touristService.deleteAttraction(name);
-        return new ResponseEntity<List<TouristAttraction>>(attractions, HttpStatus.OK);
+    @GetMapping(path = "/{name}/delete")
+    public String deleteAttraction (@PathVariable String name, Model model)  {
+        touristService.deleteAttraction(name);
+        model.addAttribute("attraction", name);
+        return "redirect:/attractions";
+    }
 
-    }*/
+    @GetMapping(path = "/{name}/tags")
+    public String showTags (@PathVariable String name, Model model)  {
+        TouristAttraction touristAttraction = touristService.findAttractionByName(name);
+        model.addAttribute("attraction", touristAttraction);
+        return "tags";
+    }
 
     @GetMapping(path="/add")
    public String addAttraction (Model model) {

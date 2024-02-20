@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Product</title>
+</head>
+<body>
+<form action="/attractions/tags" method="get" th:object="${attraction}">
+        <p th:text="${attraction.getAllTags()}">
+</form>
+
+</body>
+</html>
