@@ -6,7 +6,21 @@
 </head>
 <body>
 <form action="/attractions/tags" method="get" th:object="${attraction}">
-        <p th:text="${attraction.getAllTags()}">
+    <body>
+    <table>
+        <thead>
+        <tr>
+            <th>Bars</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="String : ${attraction.tags}">
+            <td th:text="${String}"></td>
+        </tr>
+        </tbody>
+    </table>
+    </body>
+
 </form>
 
 </body>

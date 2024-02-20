@@ -15,7 +15,7 @@ public class TouristAttraction {
         this.name = name;
         this.description = description;
         this.cityPart = cityPart;
-        this.tags = new ArrayList<>();
+        this.tags = tags;
     }
 
     public TouristAttraction(){}
