@@ -1,7 +1,5 @@
 package tourism.controller;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +7,6 @@ import tourism.model.TouristAttraction;
 import tourism.service.TouristService;
 
 import java.util.List;
-import java.util.Map;
 
 @Controller
 @RequestMapping(path="attractions")
@@ -22,7 +19,7 @@ public class TouristController {
 
     @GetMapping(path = "")
     public String getTouristAttractions(Model model) {
-        List attractions = touristService.getTouristAttrations();
+        List<TouristAttraction> attractions = touristService.getTouristAttrations();
         model.addAttribute("attractions", attractions);
         return "index";
     }
