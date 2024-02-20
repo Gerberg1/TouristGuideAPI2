@@ -23,10 +23,28 @@
                     <button type="button">Tags</button>
                 </a>
             </p>
+            <p>
+
+                <a th:href="@{ ${touristAttraction.name} + '/update'}">
+                    <button type="button">Update</button>
+                </a>
+            </p>
+            <p>
+
+                <a th:href="@{ ${touristAttraction.name} + '/delete'}">
+                    <button type="button">Delete</button>
+                </a>
+            </p>
 
         </td>
     </tr>
     </tbody>
 </table>
+<p>
+
+    <a th:href="@{'/attractions/add'}">
+        <button type="button">Add bar</button>
+    </a>
+</p>
 </body>
 </html>

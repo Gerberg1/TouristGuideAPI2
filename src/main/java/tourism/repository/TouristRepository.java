@@ -12,6 +12,7 @@ public class TouristRepository {
     private String attractionToUpdate = "";
     private ArrayList<TouristAttraction> attractions;
 
+
     public TouristRepository(){
         this.attractions = new ArrayList<>();
         attractions.add(new TouristAttraction("Guldbar", "Fredagscafé", "Nørrebro", List.of("Studentbar")));
@@ -39,8 +40,9 @@ public TouristAttraction getTouristAttraction (String name){
     public void updateAttraction(TouristAttraction touristAttraction) {
         for (TouristAttraction t : attractions) {
             if (t.getName().equalsIgnoreCase(attractionToUpdate)) {
-                t.setDescription(touristAttraction.getDescription());
                 t.setName(touristAttraction.getName());
+                t.setDescription(touristAttraction.getDescription());
+
             }
         }
     }
