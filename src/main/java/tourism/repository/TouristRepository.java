@@ -12,8 +12,8 @@ public class TouristRepository {
     private String attractionToUpdate = "";
     private ArrayList<TouristAttraction> attractions;
 
-    private List<String> cityParts = List.of("Amager", "Nørrebro", "Østerbro", "Vesterbro", "Nordvest");
-    private List<String> tags = List.of("pub", "sportsbar", "studentbar", "fussball", "smoking allowed");
+    private List<String> cityParts = List.of("Amager", "Nørrebro", "Østerbro", "Vesterbro", "North west", "Central Copenhagen", "Refshaleøen");
+    private List<String> tags = List.of("pub", "sportsbar", "studentbar", "fussball", "smoking allowed", "food", "games", "winebar", "cocktailbar", "dance floor", "karaoke", "21+");
 
 
     public List<String> getCityParts(){
