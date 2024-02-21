@@ -38,23 +38,15 @@ public class TouristRepository {
 
     public TouristRepository(){
         this.attractions = new ArrayList<>();
-        attractions.add(new TouristAttraction("Guldbar", "Fredagscafé", "Nørrebro", List.of("Studentbar")));
-        attractions.add(new TouristAttraction("Hatten", "Godbar", "Amager", List.of("Studentbar", "Pub")));
-        attractions.add(new TouristAttraction("BipBipBar", "Dyr bar", "Nørrebro", List.of("Sportsbar")));
+        attractions.add(new TouristAttraction("Guldbar", "Fredagscafé", "Nørrebro", List.of("studentbar")));
+        attractions.add(new TouristAttraction("Hatten", "Godbar", "Amager", List.of("studentbar", "pub")));
+        attractions.add(new TouristAttraction("BipBipBar", "Dyr bar", "Nørrebro", List.of("sportsbar")));
     }
 
 public List<TouristAttraction> getTouristAttractions(){
         return attractions;
 }
 
-public TouristAttraction getTouristAttraction (String name){
-        for (TouristAttraction t : attractions){
-            if (name.equalsIgnoreCase(t.getName())){
-                return t;
-            }
-        }
-        return null;
-    }
 
     public void addAttraction(TouristAttraction touristAttraction){
         attractions.add(touristAttraction);

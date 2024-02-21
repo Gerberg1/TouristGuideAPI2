@@ -71,8 +71,6 @@ public class TouristController {
         return "updatebar";
 
 
-
-
     }
     @PostMapping(path="/update")
     public String updateAttraction(TouristAttraction touristAttraction){

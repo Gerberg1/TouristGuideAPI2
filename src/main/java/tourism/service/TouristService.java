@@ -25,10 +25,6 @@ public class TouristService {
     }
 
 
-    /*public String getTouristAttraction (String name) {
-        return repository.getTouristAttraction(name);
-    }*/
-
     public void addAttraction(TouristAttraction touristAttraction){
         repository.addAttraction(touristAttraction);
     }
