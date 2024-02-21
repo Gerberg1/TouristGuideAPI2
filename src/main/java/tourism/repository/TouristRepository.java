@@ -12,6 +12,29 @@ public class TouristRepository {
     private String attractionToUpdate = "";
     private ArrayList<TouristAttraction> attractions;
 
+    private List<String> cityParts = List.of("Amager", "Nørrebro", "Østerbro", "Vesterbro", "Nordvest");
+    private List<String> tags = List.of("pub", "sportsbar", "studentbar", "fussball", "smoking allowed");
+
+
+    public List<String> getCityParts(){
+        return cityParts;
+    }
+
+    public List<String> getTags(){
+        return tags;
+    }
+
+
+    public void updateAttraction(TouristAttraction touristAttraction) {
+        for (TouristAttraction t : attractions) {
+            if (t.getName().equalsIgnoreCase(attractionToUpdate)) {
+                t.setDescription(touristAttraction.getDescription());
+                t.setCityPart(touristAttraction.getCityPart());
+                t.setTags(touristAttraction.getTags());
+            }
+        }
+    }
+
 
     public TouristRepository(){
         this.attractions = new ArrayList<>();
@@ -37,15 +60,6 @@ public TouristAttraction getTouristAttraction (String name){
         attractions.add(touristAttraction);
     }
 
-    public void updateAttraction(TouristAttraction touristAttraction) {
-        for (TouristAttraction t : attractions) {
-            if (t.getName().equalsIgnoreCase(attractionToUpdate)) {
-                t.setName(touristAttraction.getName());
-                t.setDescription(touristAttraction.getDescription());
-
-            }
-        }
-    }
 
 
     public TouristAttraction findAttractionByName(String name) {

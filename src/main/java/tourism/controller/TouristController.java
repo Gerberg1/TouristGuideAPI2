@@ -31,12 +31,6 @@ public class TouristController {
         return "find_a_bar";
     }
 
-    /*@GetMapping(path = "/{name}")
-    public ResponseEntity<TouristAttraction> getAttraction(@PathVariable String name) {
-        TouristAttraction t = touristService.getTouristAttraction(name);
-        return new ResponseEntity<TouristAttraction>(t, HttpStatus.OK);
-    }*/
-
     @GetMapping(path = "/{name}/delete")
     public String deleteAttraction (@PathVariable String name, Model model)  {
         touristService.deleteAttraction(name);
@@ -51,11 +45,14 @@ public class TouristController {
         return "tags";
     }
 
+
     @GetMapping(path="/add")
-   public String addAttraction (Model model) {
+    public String addAttraction (Model model) {
         model.addAttribute("attraction", new TouristAttraction());
-       return "addbar";
-   }
+        model.addAttribute("cityparts", touristService.getCityParts());
+        model.addAttribute("tags", touristService.getTags());
+        return "addbar";
+    }
 
 
 
@@ -69,7 +66,13 @@ public class TouristController {
     public String updateAttraction (@PathVariable String name, Model model) {
         TouristAttraction touristAttraction = touristService.findAttractionByName(name);
         model.addAttribute("attraction", touristAttraction);
+        model.addAttribute("cityparts", touristService.getCityParts());
+        model.addAttribute("tags", touristService.getTags());
         return "updatebar";
+
+
+
+
     }
     @PostMapping(path="/update")
     public String updateAttraction(TouristAttraction touristAttraction){
