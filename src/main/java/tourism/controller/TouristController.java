@@ -33,8 +33,8 @@ public class TouristController {
 
     @GetMapping(path = "/{name}/delete")
     public String deleteAttraction (@PathVariable String name, Model model)  {
-        touristService.deleteAttraction(name);
-        model.addAttribute("attraction", name);
+        TouristAttraction touristAttraction = touristService.getAttraction(name);
+        touristService.deleteAttraction(touristAttraction);
         return "redirect:/attractions";
     }
 

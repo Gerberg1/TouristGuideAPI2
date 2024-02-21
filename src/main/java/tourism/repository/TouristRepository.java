@@ -65,13 +65,21 @@ public List<TouristAttraction> getTouristAttractions(){
         return null;
     }
 
-    public void deleteAttraction(String name) {
+    public TouristAttraction getAttraction(String name) {
         for (TouristAttraction t : attractions) {
             if (name.equalsIgnoreCase(t.getName())) {
-                attractions.remove(t);
+                return t;
+
             }
         }
+        return null;
     }
 
+
+
+
+    public void deleteAttraction(TouristAttraction touristAttraction) {
+        attractions.remove(touristAttraction);
+            }
 
 }
