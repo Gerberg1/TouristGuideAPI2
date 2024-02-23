@@ -62,7 +62,7 @@ img {
 .bar-history p {
     font-size: 1rem;
     line-height: 1.6;
-    
+
 }
 
 /* Enhancements for Links */
@@ -282,8 +282,8 @@ form input[type="checkbox"] {
 form input[type="submit"]:hover {
     background-color: black;
 }orm input[type="submit"]:hover {
-    background-color: black;
-}
+     background-color: black;
+ }
 
 form input[type="submit"] {
     background-color: black;
@@ -521,7 +521,7 @@ footer a {
         margin-right: 5px; /* Space between the checkbox and its label */
         cursor: pointer;
     }
-    }
+}
 
 label {
     cursor: pointer;
@@ -557,13 +557,13 @@ body.add-a-bar {
     cursor: pointer; /* Changes cursor to pointer to indicate clickable area */
 }
 
-    footer {
-        text-align: center;
-        padding: 20px;
-        background-color: #333;
-        color: white;
-        margin-top: 40px;
-    }
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+}
 .about-us {
     font-family: 'Open Sans', Arial, sans-serif;
     line-height: 1.6;
@@ -691,22 +691,22 @@ body.add-a-bar {
         }
 
 
-@media (max-width: 768px) {
-        .bar-history main {
-            margin: 20px;
-            padding: 15px;
-        }
+        @media (max-width: 768px) {
+            .bar-history main {
+                margin: 20px;
+                padding: 15px;
+            }
 
-        .bar-history h1 {
-            font-size: 2rem; /* Slightly smaller title for small screens */
-        }
+            .bar-history h1 {
+                font-size: 2rem; /* Slightly smaller title for small screens */
+            }
 
 
-        /* Adjust padding and alignment for smaller screens */
-        .site-header, .banner h1, .bar-list, .button {
-            text-align: center;
-            padding: 10px;
-        }
+            /* Adjust padding and alignment for smaller screens */
+            .site-header, .banner h1, .bar-list, .button {
+                text-align: center;
+                padding: 10px;
+            }
 
 
         }

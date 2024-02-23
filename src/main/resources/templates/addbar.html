@@ -27,8 +27,9 @@
     </p>
     <div class="checkbox-group">
         <div th:each="tag : ${tags}">
-        <input type="checkbox" th:id="${tag}" th:name="tags" th:value="${tag}" th:field="*{tags}">
-            <label th:for="${tag}" th:text="${tag}"></label>
+            <label th:for="${tag}">
+                <input type="checkbox" th:id="${tag}" th:name="tags" th:value="${tag}" th:field="*{tags}" th:text="${tag}">
+            </label>
         </div>
     </div>
 

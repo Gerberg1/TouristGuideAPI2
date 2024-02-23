@@ -17,7 +17,7 @@
     </thead>
     <tbody>
     <tr th:each="touristAttraction : ${attractions}"
-        th:class="${touristAttraction.name == 'Guldbar' or touristAttraction.name == 'Hatten' or touristAttraction.name == 'BipBip Bar' ? 'highlight-bar' : ''}">
+        th:class="${touristAttraction.name == 'Guldbar' or touristAttraction.name == 'Hatten' or touristAttraction.name == 'BipBipBar' ? 'highlight-bar' : ''}">
         <td>
             <a th:text="${touristAttraction.name}">Attraction name</a>
             <p th:text="${touristAttraction.description}">Attraction description</p>
