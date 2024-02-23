@@ -23,9 +23,9 @@
     </select>
     <br>
     <tr th:each="String : ${tags}" >
-
-        <input type="checkbox" th:id="${String}" th:name="${String}" th:value="${String}" th:field="*{tags}">
-        <label th:for="${String}" th:text="${String}"></label>
+        <label th:for="${String}">
+        <input type="checkbox" th:id="${String}" th:name="${String}" th:value="${String}" th:field="*{tags}" th:text="${String}">
+        </label>
     </tr>
     <p>
         <button type="submit" class="button">Update attractions</button>
