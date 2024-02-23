@@ -88,11 +88,6 @@ public class TouristController {
         return "about";
     }
 
-    @GetMapping(path="/map")
-    public String getMap(){
-        return "cphbars";
-    }
-
     @GetMapping(path="/history")
     public String getHistory(){
         return "bar_history";

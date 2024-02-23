@@ -3,50 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Update Product</title>
-    <link th:href="@{/main.css}" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-<header class="site-header">
-    <div class="logo">Copenhagen Bars</div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="http://localhost:8080/attractions">Bars</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-<form action="/attractions/tags" method="get" th:object="${attraction}">
+    <!DOCTYPE html>
+    <html xmlns:th="https://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Update Product</title>
+        <link th:href="@{/main.css}" rel="stylesheet">
+    </head>
     <body>
-    <table>
-        <thead>
-        <tr>
-            <th>Bars</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="String : ${attraction.tags}">
-            <td th:text="${String}"></td>
-        </tr>
-        </tbody>
-    </table>
-  </body>
+    <div th:replace="~{fragments/header :: header}"></div>
 
-</form>
-<footer>
-    <div class="contact-info">
-        <h4>Contact Us</h4>
-        <p>Email: info@mybarsincopenhagen.com</p>
-        <p>Phone: +45 12 34 56 78</p>
-    </div>
-    <div class="social-media">
-        <a href="https://www.facebook.com" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        <a href="https://twitter.com" target="_blank">Twitter</a>
-    </div>
-</footer>
+    <!-- Form for displaying or updating tags associated with a product -->
+    <form action="/attractions/tags" method="get" th:object="${attraction}">
+        <table>
+            <thead>
+            <tr>
+                <th>Bars</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="tag : ${attraction.tags}">
+                <td th:text="${tag}"></td>
+            </tr>
+            </tbody>
+        </table>
 
-</body>
-</html>
+        <!-- Container for tags -->
+        <div class="tags-container">
+            <div th:each="tag : ${attraction.tags}">
+                <!-- Styling each tag as a div -->
+                <div class="tag" th:text="${tag}"></div>
+                <!-- If tags are clickable links, you might use an <a> element instead -->
+                <!-- <a href="#" class="tag" th:text="${tag}"></a> -->
+            </div>
+        </div>
+    </form>
+
+    <div th:replace="~{fragments/footer :: footer}"></div>
+    </body>
+    </html>
