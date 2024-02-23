@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Copenhagen Bars</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link th:href="@{/main.css}" rel="stylesheet">
+
 </head>
 <body>
 <div th:replace="fragments/header :: header">...</div>
@@ -29,7 +30,16 @@
 </main>
 
 <footer>
+  <div class="contact-info">
+    <h4>Contact Us</h4>
+    <p>Email: info@mybarsincopenhagen.com</p>
+    <p>Phone: +45 12 34 56 78</p>
+  </div>
+  <div class="social-media">
+    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    <a href="https://twitter.com" target="_blank">Twitter</a>
+  </div>
 </footer>
-
 </body>
 </html>

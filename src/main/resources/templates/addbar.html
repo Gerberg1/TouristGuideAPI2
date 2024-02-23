@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div th:replace="fragments/header :: header">...</div>
 <form action="/attractions/add" th:object="${attraction}" method="post">
     <p><label>Name:</label>
         <input type="text" name="name" th:field="*{name}"/>

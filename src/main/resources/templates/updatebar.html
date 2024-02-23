@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Update Product</title>
+    <link th:href="@{/main.css}" rel="stylesheet">
 </head>
 <body>
+<div th:replace="fragments/header :: header">...</div>
+
 <form action="/attractions/update" method="post" th:object="${attraction}">
     <p th:text="${attraction.name}">
     </p>
@@ -32,6 +35,17 @@
         </a>
     </p>
 </form>
-
+<footer>
+    <div class="contact-info">
+        <h4>Contact Us</h4>
+        <p>Email: info@mybarsincopenhagen.com</p>
+        <p>Phone: +45 12 34 56 78</p>
+    </div>
+    <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+    </div>
+</footer>
 </body>
 </html>
