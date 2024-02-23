@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find a Bar</title>
     <link th:href="@{/main.css}" rel="stylesheet">
-
 </head>
 <body class="find-a-bar-page">
 <div th:replace="~{fragments/header :: header}"></div>
@@ -17,28 +16,26 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="touristAttraction : ${attractions}">
+    <tr th:each="touristAttraction : ${attractions}"
+        th:class="${touristAttraction.name == 'Guldbar' or touristAttraction.name == 'Hatten' or touristAttraction.name == 'BipBip Bar' ? 'highlight-bar' : ''}">
         <td>
-            <div>
-                </div>
-                <a th:text="${touristAttraction.name}">Attraction name</a>
-                <p th:text="${touristAttraction.description}">Attraction description</p>
-                <p th:text="${touristAttraction.cityPart}">Attraction city part</p>
-                <a th:href="@{ ${touristAttraction.name} + '/tags'}">
-                    <button type="button" class="button">Tags</button>
-                </a>
-                <a th:href="@{ ${touristAttraction.name} + '/update'}">
-                    <button type="button" class="button">Update</button>
-                </a>
-                <a th:href="@{ ${touristAttraction.name} + '/delete'}">
-                    <button type="button" class="button">Delete</button>
-                </a>
-            </div>
+            <a th:text="${touristAttraction.name}">Attraction name</a>
+            <p th:text="${touristAttraction.description}">Attraction description</p>
+            <p th:text="${touristAttraction.cityPart}">Attraction city part</p>
+            <a th:href="@{ ${touristAttraction.name} + '/tags'}">
+                <button type="button" class="button">Tags</button>
+            </a>
+            <a th:href="@{ ${touristAttraction.name} + '/update'}">
+                <button type="button" class="button">Update</button>
+            </a>
+            <a th:href="@{ ${touristAttraction.name} + '/delete'}">
+                <button type="button" class="button">Delete</button>
+            </a>
         </td>
     </tr>
     </tbody>
-
 </table>
+
 <p>
     <a th:href="@{'/attractions/add'}">
         <button type="button" class="button">Add bar</button>

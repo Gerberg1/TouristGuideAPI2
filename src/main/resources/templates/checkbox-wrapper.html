@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link th:href="@{/main.css}" rel="stylesheet">
+
+    /* Checkbox Wrapper Style */
+    .checkbox-wrapper {
+      display: flex;
+      align-items: center; /* Aligns the checkbox and label vertically */
+      margin-bottom: 10px; /* Adds some space between each checkbox */
+    }
+
+    /* Adjustments for Checkbox Inputs */
+    .checkbox-wrapper input[type="checkbox"] {
+      margin-right: 10px; /* Adds some space between the checkbox and its label */
+      cursor: pointer;
+    }
+
+    /* Adjustments for Labels Next to Checkboxes */
+    .checkbox-wrapper label {
+      margin: 0; /* Removes default margin */
+      cursor: pointer; /* Changes cursor to pointer to indicate clickable area */
+    }
+  </style>
+</head>
+<body>
+
+<form>
+  <!-- Other form elements -->
+
+  <div class="checkbox-wrapper">
+    <input type="checkbox" id="checkbox1" name="checkbox1">
+    <label for="checkbox1" class="checkbox-label">Option 1</label>
+  </div>
+  <div class="checkbox-wrapper">
+    <input type="checkbox" id="checkbox2" name="checkbox2">
+    <label for="checkbox2" class="checkbox-label">Option 2</label>
+  </div>
+
+  <!-- Other form elements -->
+</form>
+
+</body>
+</html>

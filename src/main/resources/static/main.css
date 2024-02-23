@@ -168,6 +168,67 @@ body.find-a-bar-page {
     background-position: center;
 }
 
+
+.find-a-bar-page {
+    background-color: #f0f0f8; /
+}
+
+.bar-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.bar-list th {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.bar-list td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.highlight-bar td a:first-of-type {
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+}
+
+
+
+.button {
+    background-color: #1e1e1e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: black; /* Darker shade on hover */
+}
+
+/* Checkbox Wrapper for Inline Display */
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkbox-wrapper label {
+    margin: 0;
+}
+
+
+
 body.add-a-bar {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -475,6 +536,25 @@ body.add-a-bar {
     background-size: cover;
     background-position: center;
     color: #333;
+}
+
+/* Checkbox Wrapper Style */
+.checkbox-wrapper {
+    display: flex;
+    align-items: center; /* Aligns the checkbox and label vertically */
+    margin-bottom: 10px; /* Adds some space between each checkbox */
+}
+
+/* Adjustments for Checkbox Inputs */
+.checkbox-wrapper input[type="checkbox"] {
+    margin-right: 10px; /* Adds some space between the checkbox and its label */
+    cursor: pointer;
+}
+
+/* Adjustments for Labels Next to Checkboxes */
+.checkbox-wrapper label {
+    margin: 0; /* Removes default margin */
+    cursor: pointer; /* Changes cursor to pointer to indicate clickable area */
 }
 
     footer {
