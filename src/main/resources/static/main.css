@@ -27,6 +27,59 @@ img {
     font-weight: bold;
 }
 
+.bar-history {
+    font-family: 'Roboto', sans-serif; /* Modern, readable font */
+    background-image: url('https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    background-attachment: fixed; /* Parallax-like effect */
+    color: #333;
+
+}
+
+.bar-history main {
+    max-width: 800px;
+    margin: 40px auto;
+    margin-bottom: 200px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent with blur for readability */
+    backdrop-filter: blur(5px);
+    border-radius: 10px; /* Soft edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease-out; /* Smooth transition for interactive hover effect */
+}
+
+.bar-history main:hover {
+    transform: scale(1.02); /* Slight zoom on hover for an interactive feel */
+}
+
+.bar-history h1 {
+    color: black; /* Bright, engaging color */
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better contrast */
+}
+
+.bar-history p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Enhancements for Links */
+.bar-history a {
+    color: lightgray;
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease-in-out; /* Smooth color transition for hover */
+}
+
+.bar-history a:hover {
+    color: darkgray;
+    text-decoration: underline; /* Add underline on hover for clarity */
+}
+
+/* Responsive Design Adjustments */
+
+
 nav ul {
     display: flex;
     list-style-type: none;
@@ -556,70 +609,25 @@ body.add-a-bar {
             content: attr(data-label);
         }
 
-        .bar-history {
-            font-family: 'Roboto', sans-serif; /* Modern, readable font */
-            background-image: url('https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-            background-size: cover;
-            background-attachment: fixed; /* Parallax-like effect */
-            color: #333;
-        }
+123
 
+@media (max-width: 768px) {
         .bar-history main {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent with blur for readability */
-            backdrop-filter: blur(5px);
-            border-radius: 10px; /* Soft edges */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-            transition: transform 0.3s ease-out; /* Smooth transition for interactive hover effect */
-        }
-
-        .bar-history main:hover {
-            transform: scale(1.02); /* Slight zoom on hover for an interactive feel */
+            margin: 20px;
+            padding: 15px;
         }
 
         .bar-history h1 {
-            color: black; /* Bright, engaging color */
-            margin-bottom: 1rem;
-            font-size: 2.5rem;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better contrast */
+            font-size: 2rem; /* Slightly smaller title for small screens */
         }
 
-        .bar-history p {
-            font-size: 1rem;
-            line-height: 1.6;
-            text-align: justify;
+        /* Adjust padding and alignment for smaller screens */
+        .site-header, .banner h1, .bar-list, .button {
+            text-align: center;
+            padding: 10px;
         }
 
-        /* Enhancements for Links */
-        .bar-history a {
-            color: lightgray;
-            text-decoration: none; /* Remove underline */
-            transition: color 0.3s ease-in-out; /* Smooth color transition for hover */
-        }
 
-        .bar-history a:hover {
-            color: darkgray;
-            text-decoration: underline; /* Add underline on hover for clarity */
-        }
-
-        /* Responsive Design Adjustments */
-        @media (max-width: 768px) {
-            .bar-history main {
-                margin: 20px;
-                padding: 15px;
-            }
-
-            .bar-history h1 {
-                font-size: 2rem; /* Slightly smaller title for small screens */
-            }
-
-            /* Adjust padding and alignment for smaller screens */
-            .site-header, .banner h1, .bar-list, .button {
-                text-align: center;
-                padding: 10px;
-            }
         }
     }
 }
