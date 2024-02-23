@@ -538,23 +538,23 @@ body.add-a-bar {
     color: #333;
 }
 
-/* Checkbox Wrapper Style */
+
 .checkbox-wrapper {
     display: flex;
-    align-items: center; /* Aligns the checkbox and label vertically */
-    margin-bottom: 10px; /* Adds some space between each checkbox */
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-/* Adjustments for Checkbox Inputs */
+
 .checkbox-wrapper input[type="checkbox"] {
-    margin-right: 10px; /* Adds some space between the checkbox and its label */
+    margin-right: 10px;
     cursor: pointer;
 }
 
-/* Adjustments for Labels Next to Checkboxes */
+
 .checkbox-wrapper label {
-    margin: 0; /* Removes default margin */
-    cursor: pointer; /* Changes cursor to pointer to indicate clickable area */
+    margin: 0;
+    cursor: pointer;
 }
 
 footer {
@@ -571,6 +571,7 @@ footer {
     padding: 0;
     color: #333;
     background-color: black;
+
 }
 
 .about-us main {
@@ -592,6 +593,7 @@ footer {
     text-align: center;
     padding-bottom: 20px;
     border-bottom: 2px solid black;
+    font-size: larger;
 }
 
 .about-us p {
@@ -599,7 +601,7 @@ footer {
 }
 
 .about-us h2 {
-    font-size: 22px;
+    font-size: 19px;
     margin-top: 30px;
     margin-bottom: 15px;
 }
@@ -607,7 +609,7 @@ footer {
 
 @media (min-width: 768px) {
     .about-us {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .about-us p {
@@ -638,23 +640,23 @@ footer {
         border-bottom: 1px solid #ddd;
     }
 
-    /* Header specific styling */
+
     .tags th {
-        background-color: #000; /* Using shorthand for black */
-        color: #fff; /* Shorthand for white */
+        background-color: #000;
+        color: #fff;
     }
 
-    /* Zebra striping for rows */
+
     .tags tbody tr:nth-child(odd) {
         background-color: #f2f2f2;
     }
 
-    /* Hover effect for rows */
+
     .tags tbody tr:hover {
         background-color: #ddd;
     }
 
-    /* Responsive design adjustments for smaller screens */
+
     @media screen and (max-width: 600px) {
         .tags table, .tags thead, .tags tbody, .tags th, .tags td, .tags tr {
             display: block;
@@ -698,14 +700,87 @@ footer {
             }
 
             .bar-history h1 {
-                font-size: 2rem; /* Slightly smaller title for small screens */
+                font-size: 2rem;
             }
 
 
-            /* Adjust padding and alignment for smaller screens */
             .site-header, .banner h1, .bar-list, .button {
                 text-align: center;
                 padding: 10px;
+            }
+
+            .contact-us {
+                font-family: 'Arial', sans-serif;
+                background: linear-gradient(to right, grey 0%, black 100%);
+                padding: 40px 20px;
+                color: #fff;
+            }
+
+            .contact-us main {
+                max-width: 600px;
+                margin: 40px auto;
+                padding: 30px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 10px;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                backdrop-filter: blur(5px);
+            }
+
+            .contact-us h1 {
+                color: #fff;
+                margin-bottom: 30px;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+                letter-spacing: 1.5px;
+            }
+
+            .contact-us label {
+                display: block;
+                margin-bottom: 15px;
+                font-weight: bold;
+                opacity: 0.9;
+            }
+
+            .contact-us input[type="text"],
+            .contact-us input[type="email"],
+            .contact-us textarea {
+                width: 100%;
+                padding: 15px;
+                margin-bottom: 25px;
+                border: 2px solid black;
+                border-radius: 5px;
+                box-sizing: border-box;
+                transition: border-color 0.3s ease-in-out;
+            }
+
+            .contact-us input[type="text"]:focus,
+            .contact-us input[type="email"]:focus,
+            .contact-us textarea:focus {
+                border-color: grey;
+                outline: none; /* Fjerner standard outline */
+            }
+
+            .contact-us textarea {
+                height: 150px;
+                resize: none; /* Forhindrer brugeren i at ændre tekstområdets størrelse */
+            }
+
+            .contact-us button[type="submit"] {
+                background-color: black;
+                color: white;
+                padding: 15px 25px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 18px;
+                letter-spacing: 1px;
+                transition: transform 0.2s ease-in-out, background-color 0.3s;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            }
+
+            .contact-us button[type="submit"]:hover {
+                background-color: grey;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 12px rgba(0,0,0,0.2);
             }
 
 

@@ -4,35 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Copenhagen Bars</title>
-
-  <link th:href="@{/main.css}" rel="stylesheet">
-
+  <link rel="stylesheet" th:href="@{/main.css}">
 </head>
-<body>
-
+<body class="contact-us">
 <div th:replace="~{fragments/header :: header}"></div>
 
 <main>
   <h1>Contact Us</h1>
+  <form>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
-    <br>
-    <br>
 
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
-    <br>
-    <br>
 
     <label for="message">Message:</label>
     <textarea id="message" name="message" required></textarea>
-    <br>
-    <br>
 
     <button type="submit">Send</button>
-
+  </form>
 </main>
-<div th:replace="~{fragments/footer :: footer}"></div>
 
+<div th:replace="~{fragments/footer :: footer}"></div>
 </body>
 </html>
