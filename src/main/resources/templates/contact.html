@@ -10,17 +10,7 @@
 </head>
 <body>
 
-<header class="site-header">
-  <div class="logo">Copenhagen Bars</div>
-  <nav>
-    <ul>
-      <li><a href="/attractions">Home</a></li>
-      <li><a href="/attractions/about">About</a></li>
-      <li><a href="/attractions/list">Bars</a></li>
-      <li><a href="attractions/contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<div th:replace="~{fragments/header :: header}"></div>
 
 <main>
   <h1>Contact Us</h1>
@@ -42,19 +32,7 @@
     <button type="submit">Send</button>
 
 </main>
-
-<footer>
-  <div class="contact-info">
-    <h4>Contact Us</h4>
-    <p>Email: info@mybarsincopenhagen.com</p>
-    <p>Phone: +45 12 34 56 78</p>
-  </div>
-  <div class="social-media">
-    <a href="https://www.facebook.com" target="_blank">Facebook</a>
-    <a href="https://www.instagram.com" target="_blank">Instagram</a>
-    <a href="https://twitter.com" target="_blank">Twitter</a>
-  </div>
-</footer>
+<div th:replace="~{fragments/footer :: footer}"></div>
 
 </body>
 </html>

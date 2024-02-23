@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Copenhagen Bars</title>
   <link th:href="@{/main.css}" rel="stylesheet">
-
 </head>
-<body>
-<div th:replace="fragments/header :: header">...</div>
+<body class="about-us">
+<div th:replace="~{fragments/header :: header}"></div>
 
 <main>
   <h1>About Us</h1>
@@ -29,17 +28,6 @@
   <p>Together, let’s raise a glass to the spirit of adventure and the joy of discovering new favorites. Cheers to many memorable nights out in Copenhagen!</p>
 </main>
 
-<footer>
-  <div class="contact-info">
-    <h4>Contact Us</h4>
-    <p>Email: info@mybarsincopenhagen.com</p>
-    <p>Phone: +45 12 34 56 78</p>
-  </div>
-  <div class="social-media">
-    <a href="https://www.facebook.com" target="_blank">Facebook</a>
-    <a href="https://www.instagram.com" target="_blank">Instagram</a>
-    <a href="https://twitter.com" target="_blank">Twitter</a>
-  </div>
-</footer>
+<div th:replace="~{fragments/footer :: footer}"></div>
 </body>
 </html>

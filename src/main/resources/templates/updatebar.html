@@ -6,7 +6,7 @@
     <link th:href="@{/main.css}" rel="stylesheet">
 </head>
 <body>
-<div th:replace="fragments/header :: header">...</div>
+<div th:replace="~{fragments/header :: header}"></div>
 
 <form action="/attractions/update" method="post" th:object="${attraction}">
     <p th:text="${attraction.name}">
@@ -28,24 +28,13 @@
         <label th:for="${String}" th:text="${String}"></label>
     </tr>
     <p>
-        <button type="submit">Update attractions</button>
+        <button type="submit" class="button">Update attractions</button>
 
         <a th:href="@{'/attractions'}">
-            <button type="button">Cancel</button>
+            <button type="button" class="button">Cancel</button>
         </a>
     </p>
 </form>
-<footer>
-    <div class="contact-info">
-        <h4>Contact Us</h4>
-        <p>Email: info@mybarsincopenhagen.com</p>
-        <p>Phone: +45 12 34 56 78</p>
-    </div>
-    <div class="social-media">
-        <a href="https://www.facebook.com" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        <a href="https://twitter.com" target="_blank">Twitter</a>
-    </div>
-</footer>
+<div th:replace="~{fragments/footer :: footer}"></div>
 </body>
 </html>

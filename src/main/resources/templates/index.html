@@ -8,8 +8,7 @@
 
 </head>
 <body>
-
-<div th:replace="fragments/header :: header">...</div>
+<div th:replace="~{fragments/header :: header}"></div>
 
 <div class="banner">
     <h1>Explore the Best Bars in Town</h1>
@@ -44,21 +43,7 @@
 
 
 </main>
-
-
-
-<footer>
-    <div class="contact-info">
-        <h4>Contact Us</h4>
-        <p>Email: info@mybarsincopenhagen.com</p>
-        <p>Phone: +45 12 34 56 78</p>
-    </div>
-    <div class="social-media">
-        <a href="https://www.facebook.com" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        <a href="https://twitter.com" target="_blank">Twitter</a>
-    </div>
-</footer>
+<div th:replace="~{fragments/footer :: footer}"></div>
 
 </body>
 </html>
