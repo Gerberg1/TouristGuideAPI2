@@ -62,7 +62,7 @@ img {
 .bar-history p {
     font-size: 1rem;
     line-height: 1.6;
-    text-align: justify;
+    
 }
 
 /* Enhancements for Links */
@@ -76,6 +76,7 @@ img {
     color: darkgray;
     text-decoration: underline; /* Add underline on hover for clarity */
 }
+
 
 /* Responsive Design Adjustments */
 
@@ -619,6 +620,7 @@ body.add-a-bar {
         .bar-history h1 {
             font-size: 2rem; /* Slightly smaller title for small screens */
         }
+
 
         /* Adjust padding and alignment for smaller screens */
         .site-header, .banner h1, .bar-list, .button {
