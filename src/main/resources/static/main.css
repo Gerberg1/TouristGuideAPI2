@@ -609,7 +609,6 @@ body.add-a-bar {
             content: attr(data-label);
         }
 
-123
 
 @media (max-width: 768px) {
         .bar-history main {
