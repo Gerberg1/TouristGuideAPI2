@@ -3,42 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Update Product</title>
-    <!DOCTYPE html>
-    <html xmlns:th="https://www.thymeleaf.org" lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Update Product</title>
-        <link th:href="@{/main.css}" rel="stylesheet">
-    </head>
-    <body>
-    <div th:replace="~{fragments/header :: header}"></div>
+    <link th:href="@{/main.css}" rel="stylesheet">
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
 
-    <!-- Form for displaying or updating tags associated with a product -->
-    <form action="/attractions/tags" method="get" th:object="${attraction}">
-        <table>
-            <thead>
-            <tr>
-                <th>Bars</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="tag : ${attraction.tags}">
-                <td th:text="${tag}"></td>
-            </tr>
-            </tbody>
-        </table>
+<!-- Form for displaying or updating tags associated with a product -->
+<form action="/attractions/tags" method="get" th:object="${attraction}">
+    <table>
+        <thead>
+        <tr>
+            <th>Bars</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Thymeleaf iteration for tags -->
+        <tr th:each="tag : ${attraction.tags}">
+            <td th:text="${tag}"></td>
+        </tr>
+        </tbody>
+    </table>
 
-        <!-- Container for tags -->
-        <div class="tags-container">
-            <div th:each="tag : ${attraction.tags}">
-                <!-- Styling each tag as a div -->
-                <div class="tag" th:text="${tag}"></div>
-                <!-- If tags are clickable links, you might use an <a> element instead -->
-                <!-- <a href="#" class="tag" th:text="${tag}"></a> -->
-            </div>
+    <!-- Container for tags -->
+    <div class="tags-container">
+        <div th:each="tag : ${attraction.tags}">
+            <!-- Styling each tag as a div -->
+            <div class="tag" th:text="${tag}"></div>
+            <!-- Optional: If tags are clickable links -->
+            <!-- <a href="#" class="tag" th:text="${tag}"></a> -->
         </div>
-    </form>
+    </div>
+</form>
 
-    <div th:replace="~{fragments/footer :: footer}"></div>
-    </body>
-    </html>
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>
