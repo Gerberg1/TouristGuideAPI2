@@ -37,13 +37,13 @@
                 <p th:text="${touristAttraction.description}">Attraction description</p>
                 <p th:text="${touristAttraction.cityPart}">Attraction city part</p>
                 <a th:href="@{ ${touristAttraction.name} + '/tags'}">
-                    <button type="button">Tags</button>
+                    <button type="button" class="button">Tags</button>
                 </a>
                 <a th:href="@{ ${touristAttraction.name} + '/update'}">
-                    <button type="button">Update</button>
+                    <button type="button" class="button">Update</button>
                 </a>
                 <a th:href="@{ ${touristAttraction.name} + '/delete'}">
-                    <button type="button">Delete</button>
+                    <button type="button" class="button">Update</button>
                 </a>
             </div>
         </td>
@@ -55,5 +55,20 @@
         <button type="button">Add bar</button>
     </a>
 </p>
+
+
+
+<footer>
+    <div class="contact-info">
+        <h4>Contact Us</h4>
+        <p>Email: info@mybarsincopenhagen.com</p>
+        <p>Phone: +45 12 34 56 78</p>
+    </div>
+    <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+    </div>
+</footer>
 </body>
 </html>

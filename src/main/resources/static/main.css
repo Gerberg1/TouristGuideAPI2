@@ -131,6 +131,7 @@ body.find-a-bar-page {
     padding: 20px;
     width: calc(33% - 20px);
     text-align: center;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -183,7 +184,6 @@ body.find-a-bar-page {
     margin-bottom: 20px;
 }
 
-/* Destinations Section */
 .destinations {
     display: flex;
     flex-wrap: wrap;
@@ -330,7 +330,6 @@ footer a {
         color: white;
         margin-top: 40px;
     }
-
-
-
 }
+
+
