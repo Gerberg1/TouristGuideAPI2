@@ -9,17 +9,7 @@
 </head>
 <body>
 
-<header class="site-header">
-    <div class="logo">Copenhagen Bars</div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="http://localhost:8080/attractions">Bars</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+<div th:replace="fragments/header :: header">...</div>
 
 <div class="banner">
     <h1>Explore the Best Bars in Town</h1>
@@ -39,12 +29,12 @@
             <h3>Add a Bar</h3>
             <p>Got a recommendation? Add it to our list!</p>
         </a>
-        <a href="bar_history.html" class="service">
+        <a href="/attractions/history" class="service">
             <img src="https://a.cdn-hotels.com/gdcs/production193/d147/1152a810-9849-4d38-b7b8-b9b20bbff13a.jpg" alt="Bar History">
             <h3>Bar History</h3>
             <p>Learn about the history of Copenhagen's best bars.</p>
         </a>
-        <a href="cphbars.html" class="service">
+        <a href="/attractions/map" class="service">
             <img src="https://stevespindler.com/wp-content/uploads/2022/08/copenhagen-_area2-768x1024.jpg" alt="Map of Copenhagen">
             <h3>Map of Copenhagen</h3>
             <p>Find your way in Copenhagen.</p>

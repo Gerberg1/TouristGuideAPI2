@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Bar</title>
+    <link th:href="@{/main.css}" rel="stylesheet">
+
 </head>
-<body>
-<table>
+<body class="find-a-bar-page">
+
+
+<header class="site-header">
+    <div class="logo">Copenhagen Bars</div>
+    <nav>
+        <ul>
+            <li><a href="/attractions">Home</a></li>
+            <li><a href="/attractions/about">About</a></li>
+            <li><a href="/attractions/list">Bars</a></li>
+            <li><a href="/atttractions/contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<table class="bar-list">
+    <div class="bar-name">Bar Name Here</div>
     <thead>
     <tr>
         <th>Bars</th>
@@ -14,34 +31,26 @@
     <tbody>
     <tr th:each="touristAttraction : ${attractions}">
         <td>
-            <a th:text="${touristAttraction.name}">Attraction name</a>
-            <a th:text="${touristAttraction.description}">Attraction description</a>
-            <a th:text="${touristAttraction.cityPart}">Attraction city part</a>
-            <p>
-
+            <div>
+                </div>
+                <a th:text="${touristAttraction.name}">Attraction name</a>
+                <p th:text="${touristAttraction.description}">Attraction description</p>
+                <p th:text="${touristAttraction.cityPart}">Attraction city part</p>
                 <a th:href="@{ ${touristAttraction.name} + '/tags'}">
                     <button type="button">Tags</button>
                 </a>
-            </p>
-            <p>
-
                 <a th:href="@{ ${touristAttraction.name} + '/update'}">
                     <button type="button">Update</button>
                 </a>
-            </p>
-            <p>
                 <a th:href="@{ ${touristAttraction.name} + '/delete'}">
                     <button type="button">Delete</button>
                 </a>
-            </p>
-
-
+            </div>
         </td>
     </tr>
     </tbody>
 </table>
 <p>
-
     <a th:href="@{'/attractions/add'}">
         <button type="button">Add bar</button>
     </a>

@@ -78,6 +78,25 @@ public class TouristController {
     return "redirect:/attractions";
     }
 
+   @GetMapping(path="/contact")
+    public String getConctact(){
+       return "contact";
+    }
+
+    @GetMapping(path="/about")
+    public String getAbout(){
+        return "about";
+    }
+
+    @GetMapping(path="/map")
+    public String getMap(){
+        return "cphbars";
+    }
+
+    @GetMapping(path="/history")
+    public String getHistory(){
+        return "bar_history";
+    }
 
 }
 
