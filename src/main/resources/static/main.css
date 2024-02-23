@@ -114,6 +114,73 @@ body.find-a-bar-page {
     background-position: center;
 }
 
+body.add-a-bar {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+form input[type="text"],
+form select,
+form input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+form select {
+    display: block;
+    cursor: pointer;
+}
+
+form input[type="checkbox"] {
+    width: auto; /* Resets width for checkboxes */
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: black;
+}orm input[type="submit"]:hover {
+    background-color: black;
+}
+
+form input[type="submit"] {
+    background-color: black;
+    color: white;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
 .services {
     display: flex;
     flex-wrap: wrap;
@@ -310,7 +377,7 @@ footer a {
     }
 
     button[type="submit"] {
-        background-color: #007bff;
+        background-color: black;
         color: white;
         padding: 10px 20px;
         border: none;
@@ -320,8 +387,41 @@ footer a {
     }
 
     button[type="submit"]:hover {
-        background-color: #0056b3;
+        background-color: black;
     }
+
+    .checkbox-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .checkbox-group div {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 5px; /* Space between the checkbox and its label */
+        cursor: pointer;
+    }
+    }
+
+label {
+    cursor: pointer;
+    display: inline-block;
+}
+
+body.add-a-bar {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?cs=srgb&dl=pexels-chris-f-1283219.jpg&fm=jpg'); /* Add your image path here */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
 
     footer {
         text-align: center;
@@ -330,6 +430,126 @@ footer a {
         color: white;
         margin-top: 40px;
     }
+.about-us {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: black;
+}
+
+.about-us main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h1, .about-us h2 {
+    color: black;
+}
+
+.about-us h1 {
+    margin-top: 0;
+    font-size: 28px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+}
+
+.about-us p {
+    margin-bottom: 20px;
+}
+
+.about-us h2 {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 
+@media (min-width: 768px) {
+    .about-us {
+        font-size: 18px;
+    }
+
+    .about-us p {
+        text-align: justify;
+    }
+
+
+    /* Applies if .tags is used on the body or a specific container */
+    .tags, .tags body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    .tags table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background-color: #fff;
+    }
+
+    .tags th, .tags td {
+        text-align: left;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .tags th {
+        background-color: black;
+        color: white;
+    }
+
+    .tags tbody tr:nth-child(odd) {
+        background-color: #f2f2f2;
+    }
+
+    .tags tbody tr:hover {
+        background-color: #ddd;
+    }
+
+    @media screen and (max-width: 600px) {
+        .tags table, .tags thead, .tags tbody, .tags th, .tags td, .tags tr {
+            display: block;
+        }
+
+        .tags thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        .tags tr {
+            border: 1px solid #ccc;
+        }
+
+        .tags td {
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+            text-align: right;
+        }
+
+        .tags td:before {
+            /* Mobile view adjustments */
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            text-align: left;
+            font-weight: bold;
+            content: attr(data-label);
+        }
+    }
+}
