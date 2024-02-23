@@ -12,8 +12,8 @@ public class TouristRepository {
     private String attractionToUpdate = "";
     private ArrayList<TouristAttraction> attractions;
 
-    private List<String> cityParts = List.of("Amager", "Nørrebro", "Østerbro", "Vesterbro", "North west", "Central Copenhagen", "Refshaleøen");
-    private List<String> tags = List.of("pub", "sportsbar", "studentbar", "fussball", "smoking allowed", "food", "games", "winebar", "cocktailbar", "dance floor", "karaoke", "21+");
+    private List<String> cityParts = List.of("Amager", "Nørrebro", "Østerbro", "Vesterbro", "North West", "Central Copenhagen", "Refshaleøen");
+    private List<String> tags = List.of("Pub", "Sportsbar", "Studentbar", "Fussball", "Smoking Allowed", "Food", "Games", "Winebar", "Cocktailbar", "Dance Floor", "Karaoke", "21+");
 
 
     public List<String> getCityParts(){
@@ -38,9 +38,9 @@ public class TouristRepository {
 
     public TouristRepository(){
         this.attractions = new ArrayList<>();
-        attractions.add(new TouristAttraction("Guldbar", "Fredagscafé", "Nørrebro", List.of("studentbar")));
-        attractions.add(new TouristAttraction("Hatten", "Godbar", "Amager", List.of("studentbar", "pub")));
-        attractions.add(new TouristAttraction("BipBipBar", "Dyr bar", "Nørrebro", List.of("sportsbar")));
+        attractions.add(new TouristAttraction("Guldbar", "Fredagscafé", "Nørrebro", List.of("Studentbar", "Fussball")));
+        attractions.add(new TouristAttraction("Hatten", "Godbar", "Amager", List.of("Studentbar", "Fussball", "Dance Floor")));
+        attractions.add(new TouristAttraction("BipBipBar", "Dyr bar", "Nørrebro", List.of("Games")));
     }
 
 public List<TouristAttraction> getTouristAttractions(){
