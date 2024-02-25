@@ -10,7 +10,7 @@
 <div th:replace="~{fragments/header :: header}"></div>
 
 <!-- Form for adding a new bar entry -->
-<form action="/attractions/add" th:object="${attraction}" method="post">
+<form action="/attractions/save" th:object="${attraction}" method="post">
     <p>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" th:field="*{name}"/>

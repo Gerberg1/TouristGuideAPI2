@@ -56,13 +56,13 @@ public class TouristController {
 
 
 
-    @PostMapping("/add")
+    @PostMapping("/save")
     public String addAttraction(@ModelAttribute TouristAttraction touristAttraction){
         touristService.addAttraction(touristAttraction);
         return "redirect:/attractions";
     }
 
-    @GetMapping(path="/{name}/update")
+    @GetMapping(path="/{name}/edit")
     public String updateAttraction (@PathVariable String name, Model model) {
         TouristAttraction touristAttraction = touristService.findAttractionByName(name);
         model.addAttribute("attraction", touristAttraction);
@@ -79,7 +79,7 @@ public class TouristController {
     }
 
    @GetMapping(path="/contact")
-    public String getConctact(){
+    public String getContact(){
        return "contact";
     }
 

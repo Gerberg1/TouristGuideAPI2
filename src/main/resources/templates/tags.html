@@ -24,15 +24,7 @@
         </tbody>
     </table>
 
-    <!-- Container for tags -->
-    <div class="tags-container">
-        <div th:each="tag : ${attraction.tags}">
-            <!-- Styling each tag as a div -->
-            <div class="tag" th:text="${tag}"></div>
-            <!-- Optional: If tags are clickable links -->
-            <!-- <a href="#" class="tag" th:text="${tag}"></a> -->
-        </div>
-    </div>
+
 </form>
 
 <div th:replace="~{fragments/footer :: footer}"></div>
