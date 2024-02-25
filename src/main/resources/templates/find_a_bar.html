@@ -20,8 +20,8 @@
         th:class="${touristAttraction.name == 'Guldbar' or touristAttraction.name == 'Hatten' or touristAttraction.name == 'BipBipBar' ? 'highlight-bar' : ''}">
         <td>
             <a th:text="${touristAttraction.name}">Attraction name</a>
-            <p th:text="${touristAttraction.description}">Attraction description</p>
-            <p th:text="${touristAttraction.cityPart}">Attraction city part</p>
+            <p>Description: <strong th:text="${touristAttraction.description}"></strong></p>
+            <p>Location: <strong th:text="${touristAttraction.cityPart}"></strong></p>
             <a th:href="@{ ${touristAttraction.name} + '/tags'}">
                 <button type="button" class="button">Tags</button>
             </a>

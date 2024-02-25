@@ -239,10 +239,17 @@ body.add-a-bar {
 
 form {
     background: #fff;
+    /*padding: 20px;
+
+     */
+    display: grid;
+    grid-gap: 20px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    /*max-width: 600px;
+
+     */
     margin: 20px auto;
 }
 
@@ -400,9 +407,9 @@ footer a {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media {
     .services, .destinations {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .service, .destination {
@@ -422,12 +429,10 @@ footer a {
         font-family: 'Open Sans', Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f4f4f4;
         color: #333;
     }
 
     .site-header {
-        background-color: #333;
         color: white;
         padding: 20px 0;
         text-align: center;
@@ -460,10 +465,6 @@ footer a {
         background-color: white;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-        color: #333;
     }
 
     form {
@@ -612,10 +613,6 @@ footer {
         font-size: 15px;
     }
 
-    .about-us p {
-        text-align: justify;
-    }
-
 
     .tags {
         font-family: 'Arial', sans-serif;
@@ -714,6 +711,7 @@ footer {
                 background: linear-gradient(to right, grey 0%, black 100%);
                 padding: 40px 20px;
                 color: #fff;
+
             }
 
             .contact-us main {
@@ -724,6 +722,12 @@ footer {
                 border-radius: 10px;
                 box-shadow: 0 8px 16px rgba(0,0,0,0.2);
                 backdrop-filter: blur(5px);
+                background-image: url('https://cdn.pixabay.com/photo/2016/10/22/17/06/gradient-1761190_1280.jpg');
+
+            }
+
+            .contact-us body {
+                background-image: url('https://cdn.pixabay.com/photo/2016/10/22/17/06/gradient-1761190_1280.jpg');
             }
 
             .contact-us h1 {
