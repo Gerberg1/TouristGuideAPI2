@@ -38,9 +38,9 @@ public class TouristRepository {
 
     public TouristRepository(){
         this.attractions = new ArrayList<>();
-        attractions.add(new TouristAttraction("Guldbar", "Fredagscafé", "Nørrebro", List.of("Studentbar", "Fussball")));
-        attractions.add(new TouristAttraction("Hatten", "Godbar", "Amager", List.of("Studentbar", "Fussball", "Dance Floor")));
-        attractions.add(new TouristAttraction("BipBipBar", "Dyr bar", "Nørrebro", List.of("Games")));
+        attractions.add(new TouristAttraction("Guldbar", "Friday bar", "Nørrebro", List.of("Studentbar", "Fussball")));
+        attractions.add(new TouristAttraction("Hatten", "Dorm bar", "Amager", List.of("Studentbar", "Fussball", "Dance Floor")));
+        attractions.add(new TouristAttraction("BipBipBar", "Arcade bar", "Nørrebro", List.of("Games")));
     }
 
 public List<TouristAttraction> getTouristAttractions(){
