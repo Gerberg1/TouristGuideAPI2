@@ -1,4 +1,4 @@
-package tourism.model;
+package com.example.tourism.model;
 
 import java.util.ArrayList;
 import java.util.List;

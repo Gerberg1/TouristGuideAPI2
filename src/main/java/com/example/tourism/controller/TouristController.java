@@ -1,10 +1,10 @@
-package tourism.controller;
+package com.example.tourism.controller;
 
+import com.example.tourism.service.TouristService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import tourism.model.TouristAttraction;
-import tourism.service.TouristService;
+import com.example.tourism.model.TouristAttraction;
 
 import java.util.List;
 

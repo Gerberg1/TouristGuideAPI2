@@ -1,8 +1,8 @@
-package tourism.service;
+package com.example.tourism.service;
 
 import org.springframework.stereotype.Service;
-import tourism.model.TouristAttraction;
-import tourism.repository.TouristRepository;
+import com.example.tourism.model.TouristAttraction;
+import com.example.tourism.repository.TouristRepository;
 
 import java.util.List;
 
