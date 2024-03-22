@@ -11,12 +11,19 @@ public class TouristAttraction {
 
     private List<String> tags;
 
-    public TouristAttraction(String name, String description, String cityPart, List<String> tags) {
+    public TouristAttraction(String name, String description, String cityPart) {
         this.name = name;
         this.description = description;
         this.cityPart = cityPart;
         this.tags = tags;
     }
+
+    /*public TouristAttraction(String name, String description, String cityPart, List<String> tags) {
+        this.name = name;
+        this.description = description;
+        this.cityPart = cityPart;
+        this.tags = tags;
+    }*/
 
     public TouristAttraction(){}
 
