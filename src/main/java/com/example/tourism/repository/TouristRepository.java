@@ -16,11 +16,11 @@ public class TouristRepository {
     private List<String> tags = List.of("Pub", "Sportsbar", "Studentbar", "Fussball", "Smoking Allowed", "Food", "Games", "Winebar", "Cocktailbar", "Dance Floor", "Karaoke", "21+");
 
 
-    public List<String> getCityParts(){
+    public List<String> getCityParts() {
         return cityParts;
     }
 
-    public List<String> getTags(){
+    public List<String> getTags() {
         return tags;
     }
 
@@ -36,12 +36,13 @@ public class TouristRepository {
     }
 
 
-   /* public TouristRepository(){
+
+    public TouristRepository(){
         this.attractions = new ArrayList<>();
         attractions.add(new TouristAttraction("Guldbar", "Friday bar", "Nørrebro", List.of("Studentbar", "Fussball")));
         attractions.add(new TouristAttraction("Hatten", "Dorm bar", "Amager", List.of("Studentbar", "Fussball", "Dance Floor")));
         attractions.add(new TouristAttraction("BipBipBar", "Arcade bar", "Nørrebro", List.of("Games")));
-    }*/
+    }
 
 public List<TouristAttraction> getTouristAttractions(){
         return attractions;

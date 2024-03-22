@@ -27,6 +27,9 @@ public class TouristAttraction {
 
     public TouristAttraction(){}
 
+    public <E> TouristAttraction(String guldbar, String fridayBar, String nørrebro, List<E> studentbar) {
+    }
+
     public String getName(){
         return name;
     }
